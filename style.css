@@ -121,6 +121,7 @@ nav li a{
 .blog-featured-post img{
     height: 191px;
     margin: 1em 0;
+    object-fit: cover;
 }
 .blog-featured-post h3,
 .recent-post{
