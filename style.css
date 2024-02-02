@@ -1,0 +1,214 @@
+*{
+    box-sizing: border-box;
+}
+html, 
+body {
+    margin: 0;
+    padding: 0;
+}
+img{
+    width: 100%;
+}
+p{
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.25em;
+}
+h1,
+h2, 
+h3{
+    margin: 0;
+}
+body{
+    font-family: 'Source Sans 3', sans-serif;
+    color: #151515;
+    background-color: #FAFAFA;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em 1.2em;
+    z-index: 2;
+}
+.logo{
+    margin: 0;
+    width: 100px;
+    height: 30px;
+    max-width: 150px;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 1.5em;
+}
+nav li a{
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #090909;
+}
+
+.featured-post{
+    margin: 2em 0;
+    background: url("./images/cafe-bg.jpg") center center;
+    background-size: cover;
+    height:293px;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0;
+}
+
+.heading,
+.small-blog{
+     padding: 1.2em;
+}
+.featured-post .date{
+    font-size: 0.75rem;
+}
+.featured-post-title{
+    font-size: 2rem;
+}
+.featured-post-short{
+    margin: 0.5em 0 0;
+}
+.small-blog{
+    display: flex;
+    flex-direction: column;
+}
+.home .small-blog{
+    margin-top:1em;
+}
+.small-blog .blog-card img,
+.blog .blog-featured-post img{
+    height:232px;
+    border-radius: 3px;
+    object-fit: cover;
+}
+.small-blog blog-card-title{
+    font-size: 1.5rem;
+}
+.small-blog .blog-card .date{
+    font-size: 0.875rem;
+    font-weight: 400;
+    color:#000;
+    margin-bottom: 0.6em;
+}
+.small-blog .blog-card-short{
+    color: #505050;
+    margin: 0.6em 0;    
+}
+.view-more{
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    margin-bottom: 1.5em;
+}
+
+/*blog*/
+.blog-featured-post{
+    display: flex;
+    flex-direction: column;
+    padding: 1.2em;
+}
+.blog-featured-post .date{
+    font-size: 0.75rem;
+}
+.blog-featured-post img{
+    height: 191px;
+    margin: 1em 0;
+}
+.blog-featured-post h3,
+.recent-post{
+    font-size: 1rem;
+    font-weight: 700;
+}
+.recent-posts{
+    margin-bottom: 0;
+    text-align: center;
+}
+
+/*------------------ABOUT-----------------------*/
+.about .heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.about .about-featured-img{
+    width: 182px;
+    height: 182px;
+    object-fit: cover;
+    float: left;
+}
+.about .blog-featured-post-title{
+    font-size: 2.12rem;
+}
+.about .content {
+    margin-top: 2em;
+}
+
+
+/*descktop*/
+@media(min-width: 600px){
+    header{
+        padding: 1em 2em;
+    }
+    .home .featured-post{
+        height: 488px;
+        background-size: fill; 
+    }
+    .featured-post-short{
+     word-wrap: break-word;
+     max-width: 500px;
+    }   
+   .small-blog{
+       justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 30%);
+        grid-gap: 1.5em;
+    }
+    .logo{
+        width: 200px;
+    }
+    
+    /*blog*/
+    .blog .blog-featured-post p,
+    .blog .blog-featured-post h1,
+    .blog .blog-featured-post h3,
+    .about .content{
+        width:80%;
+       margin: 0.7rem auto;
+    }
+    .blog-featured-post img{
+        width: 95%;
+        height: 488px;
+        margin: 1em auto;
+    }
+
+    .heading{
+        padding: 3em 1.5em;
+        margin: 0 3%;
+    }
+    
+    /*about*/
+   .about .heading{
+        flex-direction: row;
+        align-items: center;
+        gap: 1.5em;
+    }
+    .subheading{
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media(min-width: 900px){
+    .subheading{
+        width: 90%;
+    }
+    
+}
+
